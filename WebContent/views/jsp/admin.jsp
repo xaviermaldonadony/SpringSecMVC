@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>admin page</title>
 </head>
 <body>
+<jsp:inlcude page="menu.jsp"></jsp:inlcude>
+you are in the admin page
 
 </body>
 </html>

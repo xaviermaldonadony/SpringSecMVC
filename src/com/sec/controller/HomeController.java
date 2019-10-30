@@ -17,9 +17,9 @@ public class HomeController {
 	@Autowired
 	UserRepository uRep;
 	
-	@RequestMapping("/")
+	@RequestMapping(value = {"/", "/welcome"})
 	public ModelAndView getHome(Model model, Principal principal) {
-		
+		System.out.println("in getHome");
 		ModelAndView mv = new ModelAndView("home");
 		
 		User user = uRep.findByUsername(principal.getName());
@@ -37,27 +37,27 @@ public class HomeController {
 	
 	@RequestMapping("/contactus")
 	public ModelAndView getContact() {
-		
+		System.out.println("in getContact");
 		ModelAndView mv = new ModelAndView("contact");
 		return mv;
 	}
 	
 	@RequestMapping("/admin")
 	public ModelAndView getAdmin() {
-		
+		System.out.println("in getAdmin");
 		ModelAndView mv = new ModelAndView("admin");
 		return mv;
 	}
 	@RequestMapping("/all")
 	public ModelAndView getSudo() {
-		
+		System.out.println("in getSudo");
 		ModelAndView mv = new ModelAndView("sudo");
 		return mv;
 	}
 	
 	@RequestMapping("/403")
 	public ModelAndView get403(Principal principal) {
-		
+		System.out.println("in get403");
 		ModelAndView mv = null;
 		if(principal != null) {
 			mv = new ModelAndView("403");

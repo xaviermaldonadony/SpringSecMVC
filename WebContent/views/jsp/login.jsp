@@ -9,8 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="_menu.jsp"></jsp:include>
+<img alt="logo" src ="${pageContext.request.contextPath}/images/logo.png">
 
-  <form action=<spring:url value="/loginAction"/>method="post" ></form>
+  <form action='<spring:url value="/loginAction"/>'method="post" >
   
   <table>
   <tr>
@@ -25,9 +27,10 @@
   
   </tr>
   <tr>
-    <td><input type="submit" name="submit"></td>
+    <td><input type="submit" value="submit" name="submit"></td>
   </tr>
   </table>
+  </form>
   
 </body>
 </html>

@@ -11,7 +11,9 @@
 <jsp:include page="_menu.jsp"></jsp:include>
 
 welcome${user.name}
-
+<br>
+${user.username}
+<br>
   Tis is an authenticated home page
 </body>
 </html>

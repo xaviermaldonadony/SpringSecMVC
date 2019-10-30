@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Subscriber</title>
 </head>
 <body>
 
+<jsp:include page="_menu.jsp"></jsp:include>
+You are in the subscriber
 </body>
 </html>
