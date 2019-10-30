@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
-@Entity @IdClass(value = Authorities.class)
+@Entity @IdClass(value = AuthoritiesId.class)
 @Table(name ="authorities")
 //@Table(name ="authorities", uniqueContraints = @UniqueConstraint (columnNmes= {"authority", "username"}))
 
@@ -16,7 +16,7 @@ public class Authorities {
 	
 	@Id
 	@ManyToOne
-	@JoinColumn(name = "useraname")
+	@JoinColumn(name = "username")
 	private User user;
 
 	public String getAuthority() {
@@ -42,10 +42,14 @@ public class Authorities {
 
 class AuthoritiesId implements Serializable{
 	
-	private static final Long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@Column(name = "authority")
-	private String security; 
+	private String authority; 
 	
 	@Id
 	@ManyToOne
@@ -53,11 +57,11 @@ class AuthoritiesId implements Serializable{
 	private User user;
 
 	public String getSecurity() {
-		return security;
+		return authority;
 	}
 
 	public void setSecurity(String security) {
-		this.security = security;
+		this.authority = security;
 	}
 
 	public User getUser() {
